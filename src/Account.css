@@ -1,22 +1,27 @@
-li{
+#accountInfo{
   position: relative;
-  height: 20vh;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
+  background-color: rgba(255,0,0,0.4);
+  height: 90vh;
+  width: 90%;
+  margin-left: 5%;
 }
 
-li img{
-  position: relative;
-  height: 100px;
-  width: 100px;
-  margin-right: 10px;
-  max-height: 100%;
-  border-radius: 100%;
+#accountInfo figure{
+  width: 30%;
+  background-color: green;
+  display: inline-block;
+  margin-left: 5%;
+  margin-top: 1rem;
 }
 
-li .userInfo{
-  display: flex;
-  flex-direction: column;
-  margin-top: 5px;
+#accountInfo figure img{
+  width: 200px;
+  height: 200px;
 }
+
+#accountInfo #userInfo{
+  position: relative;
+  display: inline-block;
+}
+
+

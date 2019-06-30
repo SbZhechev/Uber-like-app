@@ -35,7 +35,7 @@ router.post('/:userId', (req, res) => {
     });
 })
 
-router.post('/', (req, res) => {
+router.post('/:userId/:userPic', (req, res) => {
     const dataBase = req.app.locals.db;
     const newRequest = req.body;
     newRequest.postedBy = req.params.userId;

@@ -56,22 +56,26 @@ function HomePage({user, ...props}){
                     <h3>{user.username}</h3>
                 </span>
                 <span id = 'statistics'>
-                    <span>Requests: 0</span>
-                    <span>Followers: 0</span>
-                    <span>Rating: 0</span>
+                    <span>
+                        <strong>
+                            Requests: 0
+                            Followers: 0
+                            Rating: 0
+                        </strong>
+                    </span>
                 </span>
                <div id = 'navbar'>
                     <div className = 'links' onClick = {(e) => { e.target.name = 'account'; handleClick(e); getAccounts();}}>
-                        Account
+                        <strong>Account</strong>
                     </div>
                     <div className = 'links' onClick = {(e) => { e.target.name = 'requests'; handleClick(e); getRequests();}}>
-                        Requests
+                        <strong>Requests</strong>
                     </div>
                     <div className = 'links' onClick = {(e) => { e.target.name = 'drivers'; handleClick(e)}}>
-                        Drivers
+                        <strong>Drivers</strong>
                     </div>
                     <div className = 'links' onClick = {() => props.logoutUser()}>
-                        Logout
+                        <strong>Logout</strong>
                     </div>
                 </div>
            </header>

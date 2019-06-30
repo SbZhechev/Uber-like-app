@@ -12,7 +12,7 @@
 #homeHeader{
     position: relative;
     height: 10vh;
-    background-color: black;
+    background-color: rgba(3, 3, 84, 0.9);
     color: white;
     display: flex;
     flex-direction: row;
@@ -66,7 +66,7 @@
 
 #requestsList{
     position: relative;
-    max-width: 70%;
+    max-width: 65%;
     background-color: transparent;
     height: 100%;
     margin-top: 0.5rem;
@@ -84,6 +84,7 @@
     position: relative;
     left: 2rem;
     margin-bottom: 10px;
+    padding-top: 0.2rem;
     width: 50%;
 }
 
@@ -96,7 +97,7 @@
     background-color: #4267b2;
     color: white;
     right: 0;
-    margin-top: 0.2rem;
+    margin-top: 0.4rem;
 }
 
 #requestsList button:hover {

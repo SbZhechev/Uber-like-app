@@ -4,13 +4,9 @@ import Account from './Account.js';
 
 function AccountsList(props){
     return (
-        <ul>
-            {
-                props.accounts.map((acc,index) => (
-                    <Account key = {acc._id} index = {index} account = {acc} />
-                )) 
-            }
-        </ul>
+            props.accounts.map((acc,index) => (
+                <Account key = {acc._id} index = {index} account = {acc} />
+            ))
       );   
 };
 
