@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 
 function RegisterForm({handleSubmit, ...props}) {
 
-    const [newUser, setNewuser] = useState({});
+    const [newUser, setNewUser] = useState({});
 
     function handleChange(event) {
         const target = event.target;
         const value = target.value;
         const name = target.name;
 
-        setNewuser({
+        setNewUser({
             ...newUser,
             [name]: value,
         });

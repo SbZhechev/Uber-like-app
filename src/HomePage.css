@@ -58,6 +58,9 @@
     border-bottom: 0.1rem solid white;
     cursor: pointer;
 }
+h1{
+    text-align: center;
+}
 
 #content{
     box-sizing: border-box;

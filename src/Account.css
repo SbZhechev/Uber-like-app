@@ -1,9 +1,8 @@
 #accountInfo{
   position: relative;
-  
   height: 90vh;
   width: 90%;
-  margin-left: 5%;
+  margin-left: 5%; 
 }
 
 #accountInfo #currentData{
@@ -12,6 +11,7 @@
   flex-direction: row;
   background-color: rgba(0,0,255,0.1);
   height: 85vh;
+  width: 100%;
   border-bottom: 2px white solid;
   border-left: 2px white solid;
   border-right: 2px white solid;
@@ -40,7 +40,7 @@
 #accountInfo #userInfo{
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 25%;
   max-width: 50%;
   margin-top: 1rem; 
 }
@@ -52,6 +52,37 @@
 
 #accountInfo #userInfo button{
   position: relative;
-  left: 0.5rem;
+  left: 0.35rem;
   padding: 0.5rem;
+  margin-right: 1rem;
+}
+
+#accountInfo #editForm {
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 2rem;
+  width: 30%;
+  max-width: 30%;
+  height: 50%;
+  border-bottom: 2px white solid;
+  border-left: 2px white solid;
+  border-right: 2px white solid;
+  background-color: rgba(0,0,255,0.2);
+  text-align: center;
+}
+
+#accountInfo #editForm input {
+  margin-bottom: 3px;
+  padding: 10px;
+  width: auto;
+}
+
+#accountInfo #editForm button {
+  padding: 10px;
+}
+
+#accountInfo #editForm textarea {
+  position: relative;
+  right: 3px;
+  padding: 5px;
 }

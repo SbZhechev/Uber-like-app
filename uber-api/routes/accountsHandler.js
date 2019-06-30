@@ -3,6 +3,15 @@ const mongodb = require('mongodb');
 const bodyParser = require('body-parser');
 const indicative = require('indicative');
 
+function* myGenerator() {
+    var index = 300;
+    while(true)
+        yield index++;
+};
+
+var gen = myGenerator();
+
+
 router.use(bodyParser.json({limit: '20mb'}));
 
 router.get('/', (req, res) => {
@@ -31,10 +40,11 @@ router.post('/', (req, res) => {
             gender: 'string',
             accountType: 'string',
             picture: 'url',
-            bio: 'string|max:512',
+            description: 'string|max:512',
             accountStatus: 'string',
         })
         .then(newUser => {
+            newUser.picture = newUser.picture || `https://dummyimage.com/${gen.next().value}`;
             newUser.registrationDate = require('../addDate.js')();
             newUser.lastModified = require('../addDate.js')();
             dataBase.collection('Accounts').insertOne(newUser)
@@ -97,16 +107,16 @@ router.put('/:accountId', (req, res) => {
     var searchId = new mongodb.ObjectID(req.params.accountId);
     indicative.validate(updatedUser,
         {
-            name: 'required|string',
-            username: 'required|string|max:15',
-            password: 'required|string|min:8',
+            name: 'string',
+            username: 'string|max:15',
+            password: 'string|min:8',
             gender: 'string',
-            accountType: 'required|string',
-            picture: 'required|url',
-            bio: 'string|max:512',
-            accountStatus: 'required|string',
-            registrationDate: 'date',
-            lastModified: 'date'
+            accountType: 'string',
+            picture: 'url',
+            description: 'string|max:512',
+            accountStatus: 'string',
+            registrationDate: 'string',
+            lastModified: 'string'
         })
         .then(updatedUser => {
             const newValues = { $set:{ ...updatedUser, lastModified: require('../addDate.js')() } }
