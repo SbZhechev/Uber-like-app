@@ -4,14 +4,17 @@ import '../Account.css';
 function Account({account ,props}){
     return (
         <div id = 'accountInfo'>
-            <figure>
-                <img className = 'pic' src = {account.picture} alt = {account.username}></img>
-                <figcaption>Your profile picture</figcaption>
-            </figure>
-            <div id = 'userInfo'>
-                <p className = 'username'>Username: {account.username}</p>
-                <p className = 'description'>description: {account.description}</p>
-                <p className = 'gender'>Gender: {account.gender}</p>
+            <div id = 'currentData'>
+                <figure>
+                    <img className = 'pic' src = {account.picture} alt = {account.username}></img>
+                    <figcaption><h3><strong>{account.name}({account.username})</strong></h3></figcaption>
+                </figure>
+                <div id = 'userInfo'>
+                    <p id = 'username'>Username: {account.username}</p>
+                    <p id = 'description'>Description: {account.description}</p>
+                    <p id = 'gender'>Gender: {account.gender}</p>
+                    <button>Edit account</button>
+                </div>
             </div>
         </div>
     );

@@ -1,27 +1,57 @@
 #accountInfo{
   position: relative;
-  background-color: rgba(255,0,0,0.4);
+  
   height: 90vh;
   width: 90%;
   margin-left: 5%;
 }
 
+#accountInfo #currentData{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0,0,255,0.1);
+  height: 85vh;
+  border-bottom: 2px white solid;
+  border-left: 2px white solid;
+  border-right: 2px white solid;
+}
+
 #accountInfo figure{
-  width: 30%;
-  background-color: green;
+  width: auto;
+  max-width: 50%;
   display: inline-block;
   margin-left: 5%;
   margin-top: 1rem;
+  margin-right: 2rem;
 }
 
 #accountInfo figure img{
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  border-radius: 2%;
+}
+
+#accountInfo figure figcaption{
+  position: relative;
+  text-align: center;
 }
 
 #accountInfo #userInfo{
   position: relative;
   display: inline-block;
+  width: 50%;
+  max-width: 50%;
+  margin-top: 1rem; 
 }
 
+#accountInfo #userInfo p{
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
 
+#accountInfo #userInfo button{
+  position: relative;
+  left: 0.5rem;
+  padding: 0.5rem;
+}
