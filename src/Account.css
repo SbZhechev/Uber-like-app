@@ -1,0 +1,22 @@
+li{
+  position: relative;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+li img{
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin-right: 10px;
+  max-height: 100%;
+  border-radius: 100%;
+}
+
+li .userInfo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
