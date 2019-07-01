@@ -21,7 +21,6 @@ router.post('/:userId', (req, res) => {
     const dataBase = req.app.locals.db;
     const newRequest = req.body;
     newRequest.postedBy = mongodb.ObjectID(req.params.userId);
-    newRequest.userPic = newRequest.picture;
     dataBase.collection('Requests').insertOne(newRequest).then(result => {
         if(result.result.ok && result.insertedCount === 1){
             const uri = req.baseUrl + req.url + '/' + newRequest._id;

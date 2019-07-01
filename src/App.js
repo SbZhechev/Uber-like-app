@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       {
         (user.username) ? 
-        (<HomePage  user = {user} logoutUser = {logoutUser} />)
+        (<HomePage  user = {user} logoutUser = {logoutUser} loginUser = {loginUser}/>)
         :
         (<RegisterPage createAccount = {createAccount} loginUser = {loginUser}/>)
       }

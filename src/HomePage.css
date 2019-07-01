@@ -58,13 +58,19 @@
     border-bottom: 0.1rem solid white;
     cursor: pointer;
 }
-h1{
-    text-align: center;
-}
 
 #content{
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#content h1{
+    position: relative;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #requestsList{
@@ -72,7 +78,40 @@ h1{
     max-width: 65%;
     background-color: transparent;
     height: 100%;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+#content #editForm{
+    position: relative;
+    display: inline-block;
+    top: 3.7rem;
+    right: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 30%;
+    max-width: 30%;
+    height: 50%;
+    border: 2px solid white;
+    background-color: rgba(0,0,255,0.2);
+    text-align: center;
+}
+
+#content #editForm input {
+    margin-bottom: 0.3rem;
+    padding: 10px;
+    width: 40%;
+  }
+  
+#content #editForm button {
+    padding: 10px;
+}
+
+#content #editForm label{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: rgba(3, 3, 84, 0.9);
 }
 
 #requestsList #listHeader{
@@ -91,7 +130,7 @@ h1{
     width: 50%;
 }
 
-#requestsList button{
+#requestsList #createRequest{
     position: absolute;
     border-radius: 10px;
     padding: 0.5rem 1.5rem;
@@ -103,15 +142,16 @@ h1{
     margin-top: 0.4rem;
 }
 
-#requestsList button:hover {
+#requestsList #createRequest:hover {
     background-color: white;
     color: black;
 }
-#requestsList button:focus{
+#requestsList #createRequest:focus{
     outline: 0;
 }
 
 #requestCard{
+    position: relative;
     display: inline-block;
     background-color: rgba(0,0,255,0.1);
     color: black;

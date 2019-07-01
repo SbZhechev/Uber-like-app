@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-function EditAccount({handleSubmit, ...props}){
-    const [editedUser, setEditedUser] = useState({});
+function EditAccount({handleSubmit, currentUser, ...props}){
+    const [editedUser, setEditedUser] = useState(currentUser);
 
     function handleChange(event) {
         const target = event.target;

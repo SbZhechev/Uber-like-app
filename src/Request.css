@@ -11,9 +11,25 @@
     margin-right: 10px;
     max-height: 100%;
     border-radius: 100%;
+    margin-top: 0.3rem;
 }
 
 #requestCard #requestInfo{
-    padding-top: 0.5rem;
+    padding-top: 0.7rem;
     display: inline-block;
+    margin-right: 0.5rem;
+}
+
+#requestCard #takeRequest{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.3rem;
+    background-color: #4267b2;
+    color: white;
+    border-radius: 5px;
+}
+
+#requestCard #takeRequest:focus{
+    outline: 0;
 }

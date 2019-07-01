@@ -3,16 +3,23 @@ import '../Account.css';
 import EditAccount from './EditAccount';
 import axios from 'axios';
 
-function Account({account , ...props}){
+function Account({account, updateUser, ...props}){
     const [showEditForm, setShowEditForm] = useState(false);
+
     function handleShowForm() {
         setShowEditForm(true);
     };
+    
 
     function editAccount(event, editedUser){
         event.preventDefault();
-        axios.put(`http://localhost:9000/api/accounts/${account._id}`, editedUser);
-        setShowEditForm(false);
+        const formatUser = {...editedUser};
+        delete formatUser._id;
+        axios.put(`http://localhost:9000/api/accounts/${account._id}`, formatUser)
+            .then(() => {
+                updateUser(editedUser);
+                setShowEditForm(false);
+            })
     };
 
     let driverButton;
@@ -39,11 +46,11 @@ function Account({account , ...props}){
                     <p id = 'lastModified'>Last modified: {account.lastModified}</p>
                     <p id = 'accStatus'>Account status: {account.accountStatus}</p>
                     <p id = 'accType'>Account type: {account.accountType}</p>
-                    <button onClick = {handleShowForm}>Edit account</button>
+                    <button type = 'button' onClick = {handleShowForm}>Edit account</button>
                     {driverButton}
                 </div>
                 {
-                        showEditForm && <EditAccount handleSubmit = {editAccount}/>
+                        showEditForm && <EditAccount handleSubmit = {editAccount} currentUser = {account}/>
                 }
             </div>
         </div>

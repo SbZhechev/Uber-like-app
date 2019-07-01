@@ -1,7 +1,12 @@
 import React from 'react';
 
 
-function Request({request , ...props}) {
+function Request({request, currentUser, ...props}) {
+
+    let acceptRequest;
+    if(currentUser.accountType === 'driver'){
+        acceptRequest = <button id = 'takeRequest'>Take Request</button>
+    }
 
     return (
     <div id = 'requestCard'>
@@ -13,6 +18,7 @@ function Request({request , ...props}) {
                 <p>To: {request.toLocation}</p>
                 <p>Distance: {request.distance}</p>
             </span>
+            {acceptRequest}
         </div>
     </div>
 
