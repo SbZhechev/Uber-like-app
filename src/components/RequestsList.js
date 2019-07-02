@@ -6,7 +6,7 @@ function RequestsList({requests, currentUser, ...props}){
     
     return  (
         requests.map((req,index) => (
-            <Request key = {req._id} index = {index} request = {req} currentUser = {currentUser}/>
+            <Request key = {req._id} index = {index} request = {req} currentUser = {currentUser} />
         )) 
     );
 };

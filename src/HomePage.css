@@ -84,8 +84,8 @@
 #content #editForm{
     position: relative;
     display: inline-block;
-    top: 3.7rem;
-    right: 6rem;
+    top: 1rem;
+    right: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     width: 30%;
@@ -100,8 +100,13 @@
     margin-bottom: 0.3rem;
     padding: 10px;
     width: 40%;
-  }
-  
+}
+
+#content #editForm #price{
+    position: relative;
+    right: 2px;
+}
+
 #content #editForm button {
     padding: 10px;
 }

@@ -14,6 +14,7 @@ function HomePage({user, loginUser, ...props}){
 
     function handleClick(event){
         setPanel(event.target.name);
+        setShowRequestForm(false);
     }
 
     const getRequests = async () => {
@@ -29,6 +30,7 @@ function HomePage({user, loginUser, ...props}){
         setNewRequest({
             ...newRequest,
             [name]: value,
+            taken:  false,
         });
     }
 
@@ -45,15 +47,6 @@ function HomePage({user, loginUser, ...props}){
         });
 
     };
-    // const getAccounts = async () => {
-    //     const result = await axios(`http://localhost:9000/api/accounts`);
-    //     setContent(result.data);
-    // };
-    // const getDrivers = async () => {
-    //     const result = await axios(`http://localhost:9000/api/drivers`);
-    //     setContent(result.data);
-    //     console.log(result.data);
-    // };
 
 
     switch(panel){
@@ -69,7 +62,7 @@ function HomePage({user, loginUser, ...props}){
                         <h2>Active requests:</h2>
                         <button id = 'createRequest' onClick = {(e) => {e.preventDefault(); setShowRequestForm(true)}}>New request</button>
                     </div>
-                    <RequetsList  requests = {content} currentUser = {user}/>
+                    <RequetsList  requests = {content} currentUser = {user} />
                 </div>
             break;
         default:
@@ -113,7 +106,7 @@ function HomePage({user, loginUser, ...props}){
                         <label onClick = {() => {setShowRequestForm(false)}}>&times;</label>
                         <input type= 'text' name = 'fromLocation' placeholder= 'From' onChange = {(e) => handleChange(e)} required/> <br></br>
                         <input type= 'text' name = 'toLocation' placeholder= 'To' onChange = {(e) => handleChange(e)} required/> <br></br>
-                        <input type= 'text' name = 'price' placeholder= 'Price' onChange = {(e) => handleChange(e)}/><br></br>
+                        <input id = 'price' type= 'text' name = 'price' placeholder= 'Price' onChange = {(e) => handleChange(e)}/><br></br>
                         <button type='submit'>Post request</button>
                     </form>
                 }

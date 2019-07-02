@@ -2,15 +2,7 @@ const router = require('express').Router();
 const mongodb = require('mongodb');
 const bodyParser = require('body-parser');
 const indicative = require('indicative');
-
-function* myGenerator() {
-    var index = 300;
-    while(true)
-        yield index++;
-};
-
-var gen = myGenerator();
-
+const gen = require('../generateId');
 
 router.use(bodyParser.json({limit: '20mb'}));
 

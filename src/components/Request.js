@@ -3,6 +3,7 @@ import React from 'react';
 
 function Request({request, currentUser, ...props}) {
 
+
     let acceptRequest;
     if(currentUser.accountType === 'driver'){
         acceptRequest = <button id = 'takeRequest'>Take Request</button>
@@ -17,6 +18,9 @@ function Request({request, currentUser, ...props}) {
                 <p>From: {request.fromLocation}</p>
                 <p>To: {request.toLocation}</p>
                 <p>Distance: {request.distance}</p>
+                {
+                    (request.taken) ? (<label id = 'price'>Taken</label>):(<label id = 'price'>Price: {request.price}</label>)
+                }
             </span>
             {acceptRequest}
         </div>
