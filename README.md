@@ -14,4 +14,9 @@
   #### 3. Add moderator type account, rating on users and drivers, leaderboard.
   #### 4. Embbed real time location tracking API like google maps.
 
+### Navigation help
+  #### /uber-api -> contains all the back-end implementation.
+  #### /uber-api/routes -> contains all the api endpoints.
+  #### /src -> contains all the front-end implementation.
+  #### /src/components -> contains all the React.js components
   
