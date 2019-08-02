@@ -103,6 +103,7 @@ function HomePage({user, loginUser, ...props}){
                 {body}
                 {showRequestForm &&
                     <form id = 'editForm' onSubmit = {(e) => createRequest(e)}>
+                        <h3>Create New Request</h3>
                         <label onClick = {() => {setShowRequestForm(false)}}>&times;</label>
                         <input type= 'text' name = 'fromLocation' placeholder= 'From' onChange = {(e) => handleChange(e)} required/> <br></br>
                         <input type= 'text' name = 'toLocation' placeholder= 'To' onChange = {(e) => handleChange(e)} required/> <br></br>

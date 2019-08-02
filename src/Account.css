@@ -71,18 +71,12 @@
   text-align: center;
 }
 
-#accountInfo #editForm input {
-  margin-bottom: 3px;
-  padding: 10px;
-  width: auto;
+#accountInfo #editForm h3{
+  position: relative;
+  margin-bottom: 1rem;
 }
 
 #accountInfo #editForm button {
+  margin-top: 0.2rem;
   padding: 10px;
-}
-
-#accountInfo #editForm textarea {
-  position: relative;
-  right: 3px;
-  padding: 5px;
 }
